@@ -48,14 +48,14 @@ function menu:draw()
 	local lx = love.graphics.getWidth()
 
 	love.graphics.setColor(0.3,0.3,0.3)
-	love.graphics.draw(self.bg, 0, 0, 0, 0.3, 1)
+	love.graphics.draw(self.bg, 0, 0, 0, 0.3, 1.1)
 
 	self:draw_button(300, "Stream")
-	self:draw_button(450, "Test")
-	self:draw_button(600, "Test2")
+	self:draw_button(450, "Remote")
+	self:draw_button(600, "File")
 
 	love.graphics.setColor(1,1,1)
-	love.graphics.draw(self.title, 0, 50+self.title_dy)
+	love.graphics.draw(self.title, 0, 80+self.title_dy)
 
 end
 
