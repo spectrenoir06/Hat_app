@@ -47,7 +47,7 @@ end
 function menu:draw()
 	local lx = love.graphics.getWidth()
 
-	love.graphics.setColor(0.3,0.3,0.3)
+	love.graphics.setColor(0.6 ,0.6 ,0.6)
 	love.graphics.draw(self.bg, 0, 0, 0, 0.3, 1.1)
 
 	self:draw_button(300, "Stream")
