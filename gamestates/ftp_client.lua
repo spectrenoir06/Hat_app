@@ -62,12 +62,12 @@ function upload(filename)
 	return f, e
 end
 
-local select = {}
+local ftp_client = {}
 
-function select:init() -- Called once, and only once, before entering the state the first time
+function ftp_client:init() -- Called once, and only once, before entering the state the first time
 end
 
-function select:enter(previous) -- Called every time when entering the state
+function ftp_client:enter(previous) -- Called every time when entering the state
 	-- local files = list()
 	-- self.files = {}
 	-- for k,v in ipairs(files) do
@@ -80,36 +80,36 @@ function select:enter(previous) -- Called every time when entering the state
 	upload("4X")
 end
 
-function select:leave() -- Called when leaving a state.
+function ftp_client:leave() -- Called when leaving a state.
 end
 
-function select:resume() -- Called when re-entering a state by Gamestate.pop()
+function ftp_client:resume() -- Called when re-entering a state by Gamestate.pop()
 end
 
-function select:update(dt)
+function ftp_client:update(dt)
 end
 
-function select:draw()
+function ftp_client:draw()
 	-- for k,v in ipairs(self.files) do
 	-- 	love.graphics.print(k..": "..v.name..", size: "..math.floor(v.size/1024), 10, k*15)
 	-- end
 end
 
-function select:focus(focus)
+function ftp_client:focus(focus)
 end
 
-function select:quit()
+function ftp_client:quit()
 end
 
 
 
-function select:keypressed(key, scancode)
+function ftp_client:keypressed(key, scancode)
 end
 
-function select:mousepressed(x,y, mouse_btn)
+function ftp_client:mousepressed(x,y, mouse_btn)
 end
 
-function select:joystickpressed(joystick, button )
+function ftp_client:joystickpressed(joystick, button )
 end
 
-return select
+return ftp_client
