@@ -57,6 +57,8 @@ function menu:draw()
 	love.graphics.setColor(1,1,1)
 	love.graphics.draw(self.title, 0, 80+self.title_dy)
 
+	-- love.graphics.print(love.graphics.getWidth().." "..love.graphics.getHeight(), 0, 200)
+
 end
 
 function menu:focus(focus)
