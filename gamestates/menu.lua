@@ -23,9 +23,13 @@ function menu:init() -- Called once, and only once, before entering the state th
 
 	self.bg = love.graphics.newVideo("ressource/video/bg.ogv")
 	self.bg:play()
+
+	self.title = love.graphics.newImage("ressource/Image/title.png")
+	self.title_dy = 0
 end
 
 function menu:enter(previous) -- Called every time when entering the state
+	self.title_timer = 0
 end
 
 function menu:leave() -- Called when leaving a state.
@@ -36,6 +40,8 @@ end
 
 function menu:update(dt)
 	if not self.bg:isPlaying() then self.bg:rewind() end
+	self.title_timer = self.title_timer  + dt
+	self.title_dy = math.sin(self.title_timer*5)*5
 end
 
 function menu:draw()
@@ -47,6 +53,9 @@ function menu:draw()
 	self:draw_button(300, "Stream")
 	self:draw_button(450, "Test")
 	self:draw_button(600, "Test2")
+
+	love.graphics.setColor(1,1,1)
+	love.graphics.draw(self.title, 0, 50+self.title_dy)
 
 end
 
