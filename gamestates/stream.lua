@@ -150,7 +150,7 @@ end
 function stream:mousepressed(x,y, mouse_btn)
 	local s = love.graphics.getWidth() / 64
 	local p = y / (8*s+5)-1
-	print(p)
+	-- print(p)
 	self.anim = math.floor(p)
 
 	if self.anim > #self.anims - 1 then

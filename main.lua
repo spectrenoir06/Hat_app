@@ -1,5 +1,6 @@
-Gamestate = require "hump.gamestate"
+love.filesystem.setRequirePath("?.lua;?/init.lua;lib/?.lua")
 
+Gamestate = require "lib.gamestate"
 states = {}
 
 states.select = require "gamestates.select"
