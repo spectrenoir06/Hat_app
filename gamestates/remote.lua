@@ -7,7 +7,6 @@ function remote:init() -- Called once, and only once, before entering the state 
 end
 
 function remote:enter(previous) -- Called every time when entering the state
-
 end
 
 function remote:leave() -- Called when leaving a state.
@@ -20,9 +19,6 @@ function remote:update(dt)
 end
 
 function remote:draw()
-	-- for k,v in ipairs(self.files) do
-	-- 	love.graphics.print(k..": "..v.name..", size: "..math.floor(v.size/1024), 10, k*15)
-	-- end
 end
 
 function remote:focus(focus)

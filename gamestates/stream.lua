@@ -119,7 +119,7 @@ end
 function stream:draw()
 	local s = love.graphics.getWidth() / 64
 	love.graphics.setColor(1, 1, 1, 1)
-	love.graphics.print(love.timer.getFPS() ,10,30)
+	-- love.graphics.print(love.timer.getFPS() ,10,30)
 	for k,v in ipairs(self.anims) do
 		-- print(k,v)
 		if self.anim+1 == k then
@@ -145,6 +145,9 @@ end
 
 
 function stream:keypressed(key, scancode)
+	if key == "escape" or key == "appback" then
+		Gamestate.pop()
+	end
 end
 
 function stream:mousepressed(x,y, mouse_btn)
